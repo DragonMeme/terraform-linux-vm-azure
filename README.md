@@ -19,7 +19,7 @@ Example:
   tenant_id = OOOOOOOO-OOOO-OOOO-OOOO-OOOOOOOOOOOO
 ```
 
-Warning: This service can charge you so remember to `terraform destroy` after use.
+Warning: This service can charge you so remember to `terraform destroy` or delete the resource group after use.
 
 ## How to run: 
 Preparation: you will have to have terraform setup as an environment variable before following this step.
