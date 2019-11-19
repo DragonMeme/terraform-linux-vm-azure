@@ -25,20 +25,14 @@ Warning: This service can charge you so remember to `terraform destroy` or delet
 Preparation: you will have to have terraform setup as an environment variable before following this step.
 Otherwise the easy way is to move the `terraform.exe` file to the same directory as your project.
 
-1.) Enter command `terraform init` (`./terraform init` if doing the easy way)
+1.) Enter command `terraform init` (`./terraform init` if doing the easy way) in your terminal.
 
-2.) Then enter command `terraform apply -var-file='example.tfvars'` (`./terraform apply -var-file='example.tfvars'` if doing the easy way). You will have to wait for around 3 minutes for the process to be done.
+2.) Then enter command `terraform apply -var-file='example.tfvars'` (`./terraform apply -var-file='example.tfvars'` if doing the easy way). You will have to wait for around 3 minutes for the process to be done. When done there should be an output of the command. The output should be of the form `ssh adminUser@20.192.192.192`.
 
-3.) Login to your Azure Home, you should see a resource group named "testProduction", click on it.
+3.) Copy and paste the command to the terminal. 
 
-4.) Select `myTFLVM` which is of type Virtual Machine.
+4.) Enter your password. (Use `terraform output Password` orr `./terraform output Password` if you have forgotten the password.)
 
-5.) Select Connect.
+5.) Congratulations, you have access to your linux virtual machine.
 
-6.) Select SSH.
-
-7.) Copy and paste from `Login using local VM account` to terminal. Example copied string: `ssh adminUser@20.192.192.192`
-
-8.) Enter password (In your case, password is "Password!234")
-
-9.) You now have access to the linux terminal.
+6.) IMPORTANT: `terraform destroy` orr `./terraform destroy` after use and do not close terminal while destroying is on progress.

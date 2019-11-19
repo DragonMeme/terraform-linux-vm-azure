@@ -13,7 +13,7 @@ variable "region" {
 }
 
 variable "resourceName" {
-    default = "testProduction"
+    default = "testLinuxVMDeploy"
 }
 
 # name for virtual machine
