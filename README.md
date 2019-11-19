@@ -31,7 +31,7 @@ Otherwise the easy way is to move the `terraform.exe` file to the same directory
 
 3.) Copy and paste the command to the terminal. 
 
-4.) Enter your password. (Use `terraform output Password` orr `./terraform output Password` if you have forgotten the password.)
+4.) Enter your password. (Use `terraform output Password` or `./terraform output Password` if you have forgotten the password.)
 
 5.) Congratulations, you have access to your linux virtual machine.
 
