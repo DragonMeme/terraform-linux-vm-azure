@@ -37,7 +37,7 @@ Otherwise the easy way is to move the `terraform.exe` file to the same directory
 
 6.) Select SSH.
 
-7.) Copy and paste from `Login using local VM account` to terminal. Example copied string: `ssh adminUser@20.192.192.192`
+7.) Copy and paste command string from `Login using local VM account` to terminal. Example command string: `ssh adminUser@20.192.192.192`
 
 8.) Enter password (In your case, password is "Password!234")
 
