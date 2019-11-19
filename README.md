@@ -22,7 +22,7 @@ Example:
 Warning: This service can charge you so remember to `terraform destroy` or delete the resource group after use.
 
 ## How to run: 
-Preparation: you will have to have terraform setup as an environment variable before following this step.
+Preparation: You will have to have terraform setup as an environment variable before following this step.
 Otherwise the easy way is to move the `terraform.exe` file to the same directory as your project.
 
 1.) Enter command `terraform init` (`./terraform init` if doing the easy way) in your terminal.
