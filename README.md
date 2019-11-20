@@ -66,7 +66,7 @@ OPTIONAL: Use `terraform output Password` if you have forgotten the password or 
 
 4.) Follow terminal instructions and enter your password. Default password is `Password!234`
 
-5.) Congratulations, you have access to your linux virtual machine. To return to terminal from SSH press `Ctrl` + `D`.
+5.) Congratulations, you have access to your linux virtual machine. To return to terminal from SSH press `Ctrl` + `D` or type in command `logout`.
 
 6.) IMPORTANT: `terraform destroy` after use and do not close terminal while destroying is on progress.
 
@@ -88,6 +88,6 @@ OPTIONAL: Use `terraform output Password` if you have forgotten the password or 
 
 4.) Follow terminal instructions and enter your password. Default password is `Password!234`
 
-5.) Congratulations, you have access to your linux virtual machine. To return to terminal from SSH press `Ctrl` + `D`.
+5.) Congratulations, you have access to your linux virtual machine. To return to terminal from SSH press `Ctrl` + `D` or type in command `logout`.
 
 6.) IMPORTANT: `terraform destroy -var-file='example.tfvars'` after use and do not close terminal while destroying is on progress.
