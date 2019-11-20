@@ -16,8 +16,11 @@ Example:
 
 `example.tfvars` file contents (replace with your own valid ids):
 ```tfvars
-  subscription_id = XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-  tenant_id = OOOOOOOO-OOOO-OOOO-OOOO-OOOOOOOOOOOO
+  subscription_id = "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+  tenant_id = "OOOOOOOO-OOOO-OOOO-OOOO-OOOOOOOOOOOO"
+
+  #Optional
+  tagAuthor = "David Janson"
 ```
 
 WARNING: This service can cost money so remember to delete resource group using the terraform destroy command.
