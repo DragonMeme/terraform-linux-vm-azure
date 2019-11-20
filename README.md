@@ -39,7 +39,7 @@ OPTIONAL: `terraform plan` or `./terraform plan` to double check setup.
 
 3.) Copy and paste the command to the terminal. 
 
-4.) Enter your password. (Use `terraform output Password` or `./terraform output Password` if you have forgotten the password.)
+4.) Follow terminal instructions and enter your password. (Use `terraform output Password` or `./terraform output Password` if you have forgotten the password.)
 
 5.) Congratulations, you have access to your linux virtual machine. To return to terminal from SSH press `Ctrl` + `D`.
 
@@ -59,7 +59,7 @@ OPTIONAL: `terraform plan` or `./terraform plan` to double check setup.
 
 3.) Copy and paste the command to the terminal. 
 
-4.) Enter your password. (Use `terraform output Password` if you have forgotten the password.)
+4.) Follow terminal instructions and enter your password. (Use `terraform output Password` if you have forgotten the password.)
 
 5.) Congratulations, you have access to your linux virtual machine. To return to terminal from SSH press `Ctrl` + `D`.
 
