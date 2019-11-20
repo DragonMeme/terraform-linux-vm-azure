@@ -1,6 +1,6 @@
 # terraform-linux-vm-azure
 
-Adapted from [Getting Started](https://learn.hashicorp.com/terraform?track=azure#azure)
+Adapted from [Getting Started](https://learn.hashicorp.com/terraform/azure/intro_az)
 
 Ubuntu 18.04 LTS Virtual Machine implementation to Azure in Terraform.
 
