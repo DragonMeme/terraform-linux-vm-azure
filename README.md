@@ -37,9 +37,11 @@ OPTIONAL: `terraform plan` or `./terraform plan` to double check setup.
 
 2.) Then enter command `terraform apply -var-file='example.tfvars'` (`./terraform apply -var-file='example.tfvars'` if doing the easy way). You will have to wait for around 3 minutes for the process to be done. When done there should be an output of the command. The output should be of the form `ssh adminUser@20.192.192.192`.
 
+OPTIONAL: Use `terraform output Password` if you have forgotten the password or want it printed on console.
+
 3.) Copy and paste the command to the terminal. 
 
-4.) Follow terminal instructions and enter your password. (Use `terraform output Password` or `./terraform output Password` if you have forgotten the password.)
+4.) Follow terminal instructions and enter your password.
 
 5.) Congratulations, you have access to your linux virtual machine. To return to terminal from SSH press `Ctrl` + `D`.
 
@@ -57,9 +59,11 @@ OPTIONAL: `terraform plan` to double check setup.
 
 2.) Then enter command `terraform apply -var-file=example.tfvars`. You will have to wait for around 3 minutes for the process to be done. When done there should be an output of the command. The output should be of the form `ssh adminUser@20.192.192.192`.
 
+OPTIONAL: Use `terraform output Password` if you have forgotten the password or want it printed on console.
+
 3.) Copy and paste the command to the terminal. 
 
-4.) Follow terminal instructions and enter your password. (Use `terraform output Password` if you have forgotten the password.)
+4.) Follow terminal instructions and enter your password.
 
 5.) Congratulations, you have access to your linux virtual machine. To return to terminal from SSH press `Ctrl` + `D`.
 
