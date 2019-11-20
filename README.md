@@ -53,7 +53,7 @@ sudo mv terraform /usr/local/bin/
 
 1.) Enter command `terraform init` in your terminal.
 
-OPTIONAL: `terraform plan` or `./terraform plan` to double check setup.
+OPTIONAL: `terraform plan` to double check setup.
 
 2.) Then enter command `terraform apply -var-file=example.tfvars`. You will have to wait for around 3 minutes for the process to be done. When done there should be an output of the command. The output should be of the form `ssh adminUser@20.192.192.192`.
 
