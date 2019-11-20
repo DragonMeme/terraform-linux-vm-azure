@@ -19,8 +19,7 @@ resource "azurerm_resource_group" "test" {
     }
 }
 
-# Create virtual network. Mainly used to connect virtual machines to virtual machines.
-# Here we are using it to connect our virtual machine to a subnet.
+# Create virtual network.
 resource "azurerm_virtual_network" "test" {
     name                = var.nameTFVN
     resource_group_name = azurerm_resource_group.test.name
@@ -28,7 +27,7 @@ resource "azurerm_virtual_network" "test" {
     address_space       = ["10.0.0.0/16"]
 }
 
-# Create subnet. Mainly handles dividing of IP addresses. 
+# Create subnet. 
 resource "azurerm_subnet" "test" {
     name                 = var.nameTFS
     resource_group_name  = azurerm_resource_group.test.name
@@ -36,7 +35,7 @@ resource "azurerm_subnet" "test" {
     address_prefix       = "10.0.2.0/24"
 }
 
-# Create public IP. This is the IP that the VM will be associated to.
+# Create public IP.
 resource "azurerm_public_ip" "test" {
     name                = var.nameTFPIP
     location            = azurerm_resource_group.test.location
@@ -64,7 +63,7 @@ resource "azurerm_network_security_group" "test" {
     }
 }
 
-# Create network interface. Establish a connection to SSH using the given IP.
+# Create network interface.
 resource "azurerm_network_interface" "test" {
     name                = var.nameTFNI
     location            = azurerm_resource_group.test.location
