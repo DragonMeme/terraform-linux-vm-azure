@@ -30,12 +30,13 @@ git clone https://github.com/DragonMeme/terraform-linux-vm-azure.git
 ### Windows 10:
 Preparation: You will have to have terraform setup as an environment variable before following this step.
 Otherwise the easy way is to move the `terraform.exe` file to the same directory as your project.
+If doing the easy way, your command prefix will be `./terraform` instead of `terraform`.
 
-1.) Enter command `terraform init` (`./terraform init` if doing the easy way) in your terminal.
+1.) Enter command `terraform init` in your terminal.
 
-OPTIONAL: `terraform plan` or `./terraform plan` to double check setup.
+OPTIONAL: `terraform plan` or to double check setup.
 
-2.) Then enter command `terraform apply -var-file='example.tfvars'` (`./terraform apply -var-file='example.tfvars'` if doing the easy way). You will have to wait for around 3 minutes for the process to be done. When done there should be an output of the command. The output should be of the form `ssh adminUser@20.192.192.192`.
+2.) Then enter command `terraform apply -var-file='example.tfvars'` if doing the easy way). You will have to wait for around 3 minutes for the process to be done. When done there should be an output of the command. The output should be of the form `ssh adminUser@20.192.192.192`.
 
 OPTIONAL: Use `terraform output Password` if you have forgotten the password or want it printed on console.
 
@@ -45,7 +46,7 @@ OPTIONAL: Use `terraform output Password` if you have forgotten the password or 
 
 5.) Congratulations, you have access to your linux virtual machine. To return to terminal from SSH press `Ctrl` + `D`.
 
-6.) IMPORTANT: `terraform destroy'` or `./terraform destroy` after use and do not close terminal while destroying is on progress.
+6.) IMPORTANT: `terraform destroy` after use and do not close terminal while destroying is on progress.
 
 ### Ubuntu 18.04: 
 Preparation: You will have to extract from the downloaded `.tar.gz` file first and then move the `terraform` file to `/usr/local/bin/`. Command to do this is:
