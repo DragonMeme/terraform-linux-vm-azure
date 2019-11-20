@@ -48,7 +48,9 @@ Clone this repository using the command:
 git clone https://github.com/DragonMeme/terraform-linux-vm-azure.git
 ```
 
-Check that there is a resource group named "RG_TEST" with the Storage Account "msa2019interntfstatetest" and the container called "tfstate" present. Otherwise make one in Azure Cloud.
+Login to azure using `az login`.
+
+Check that there is a resource group named "RG_TEST" with the Storage Account "msa2019interntfstatetest" and the container called "tfstate" present. Otherwise make one in Azure Cloud with the following naming conventions as stated above.
 
 Use the command in bash to obtain the access key: 
 ```bash
