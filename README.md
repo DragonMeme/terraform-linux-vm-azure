@@ -9,7 +9,7 @@ Linux VM implementation in Terraform to Azure.
 * A `.tfvars` file (see example below) with at least:
   * subscription_id
   * tenant_id
-* Terraform ([Download here](https://www.terraform.io/downloads.html))
+* Terraform ([Download here](https://www.terraform.io/downloads.html) based on operating system.)
   
 Example: 
 
@@ -19,8 +19,6 @@ Example:
   tenant_id = OOOOOOOO-OOOO-OOOO-OOOO-OOOOOOOOOOOO
 ```
 
-Warning: This service can charge you so remember to `terraform destroy` or delete the resource group after use.
-
 ## How to run: 
 
 ### Windows 10:
@@ -28,6 +26,8 @@ Preparation: You will have to have terraform setup as an environment variable be
 Otherwise the easy way is to move the `terraform.exe` file to the same directory as your project.
 
 1.) Enter command `terraform init` (`./terraform init` if doing the easy way) in your terminal.
+
+OPTIONAL: `terraform plan` or `./terraform plan` to double check setup.
 
 2.) Then enter command `terraform apply -var-file='example.tfvars'` (`./terraform apply -var-file='example.tfvars'` if doing the easy way). You will have to wait for around 3 minutes for the process to be done. When done there should be an output of the command. The output should be of the form `ssh adminUser@20.192.192.192`.
 
@@ -40,12 +40,14 @@ Otherwise the easy way is to move the `terraform.exe` file to the same directory
 6.) IMPORTANT: `terraform destroy'` or `./terraform destroy` after use and do not close terminal while destroying is on progress.
 
 ### Ubuntu 18.04: 
-Preparation: You will have to move the `terraform` file (extract from .tar.gz file first) to `/usr/local/bin/`. Command to do this is:
+Preparation: You will have to extract from the downloaded `.tar.gz` file first and then move the `terraform` file to `/usr/local/bin/`. Command to do this is:
 ```bash
 sudo mv terraform /usr/local/bin/
 ```
 
 1.) Enter command `terraform init` in your terminal.
+
+OPTIONAL: `terraform plan` or `./terraform plan` to double check setup.
 
 2.) Then enter command `terraform apply -var-file=example.tfvars`. You will have to wait for around 3 minutes for the process to be done. When done there should be an output of the command. The output should be of the form `ssh adminUser@20.192.192.192`.
 
