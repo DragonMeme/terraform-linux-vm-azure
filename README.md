@@ -2,7 +2,23 @@
 
 Adapted from [Getting Started](https://learn.hashicorp.com/terraform?track=azure#azure)
 
-Linux Virtual Machine implementation to Azure in Terraform.
+Ubuntu 18.04 LTS Virtual Machine implementation to Azure in Terraform.
+
+## Contents:
+In order to run a virtual machine, these components are needed:
+* Virtual network: Network that connects VM to VM(s) or other components.
+* Subnet: Handles IP address(es) processes.
+* Public IP Address: The address needed to connect to VM.
+* Network Security Group: Decides how the VM should be accessed, in this case we use SSH to access the VM.
+* Network Interface: Helps connect the host to the private/public network.
+
+But in this case, route table is optional as not a lot of people would be accessing the VM.
+
+The components above are already set in `main.tf` along with the implementation of the virtual machine.
+
+`outputs.tf` contains the output of the command needed to access the virtual machine along with the password to log in to the virtual machine in case the password is forgotten.
+
+`variables.tf` contains default values for most inputs if not assigned any value in a `.tfvars` file.
 
 ## Requirements: 
 * Microsoft Azure account with subscription_id and tenant_id.
