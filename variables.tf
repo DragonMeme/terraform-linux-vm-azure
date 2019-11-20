@@ -53,6 +53,12 @@ variable "nameIPConfig" {
     default = "myIPC"
 }
 
+# name for the route table
+variable "nameTFRT" {
+    default = "myTFRT"
+    description = "Name of the route table to be created."
+}
+
 # name for host virtual machine
 variable "hostName" {
     default = "hostname"
@@ -92,4 +98,9 @@ variable "tagEnvironment" {
 variable "tagProject" {
     default = "Linux Launcher"
     description = "Add tag to what the purpose of what the scripts here does overall."
+}
+
+variable "tagAuthor" {
+    default = "Anonymous"
+    description = "Add name of author."
 }

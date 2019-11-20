@@ -16,6 +16,7 @@ resource "azurerm_resource_group" "test" {
     tags            = {
         environment = var.tagEnvironment
         project     = var.tagProject
+        createdBy   = var.tagAuthor
     }
 }
 
@@ -73,6 +74,19 @@ resource "azurerm_network_interface" "test" {
         subnet_id                       = azurerm_subnet.test.id
         private_ip_address_allocation   = "Dynamic"
         public_ip_address_id            = azurerm_public_ip.test.id
+    }
+}
+
+resource "azurerm_route_table" "test" {
+    name                          = var.nameTFRT
+    location                      = azurerm_resource_group.test.location
+    resource_group_name           = azurerm_resource_group.test.name
+    disable_bgp_route_propagation = false
+
+    route {
+        name           = "route1"
+        address_prefix = "10.1.0.0/16"
+        next_hop_type  = "vnetlocal"
     }
 }
 
