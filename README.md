@@ -2,7 +2,7 @@
 
 Adapted from [Getting Started](https://learn.hashicorp.com/terraform?track=azure#azure)
 
-Linux VM implementation in Terraform to Azure.
+Linux Virtual Machine implementation to Azure in Terraform.
 
 ## Requirements: 
 * Microsoft Azure account with subscription_id and tenant_id.
@@ -37,7 +37,7 @@ Note: If doing the easy way, your command prefix will be `./terraform` instead o
 
 1.) Enter command `terraform init` in your terminal.
 
-OPTIONAL: `terraform plan` or to double check setup.
+OPTIONAL: `terraform plan` to double check setup.
 
 2.) Then enter command `terraform apply -var-file='example.tfvars'` if doing the easy way). You will have to wait for around 3 minutes for the process to be done. When done there should be an output of the command. The output should be of the form `ssh adminUser@20.192.192.192`.
 
