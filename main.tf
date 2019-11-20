@@ -1,5 +1,5 @@
 # Configure the provider. 
-# Replace your subscription_id and tenant_id with a .tfvars file
+# Replace your subscription_id and tenant_id using a .tfvars file
 # that contains both the ids and possibly the other variables in this file.
 provider "azurerm" {
     version         = "~>1.30.0"
