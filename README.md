@@ -6,7 +6,7 @@ Linux VM implementation in Terraform to Azure.
 
 ## Requirements: 
 * Microsoft Azure account with subscription_id and tenant_id.
-* A `.tfvars` file (see example below) with at least:
+* A `.tfvars` file (see example below and not included with the repo so you have to make your own) with at least:
   * subscription_id
   * tenant_id
 * Terraform ([Download here](https://www.terraform.io/downloads.html) based on operating system.)
