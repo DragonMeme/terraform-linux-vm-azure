@@ -45,9 +45,9 @@ Preparation: You will have to move the `terraform` file (extract from .tar.gz fi
 sudo mv terraform /usr/local/bin/
 ```
 
-1.) Enter command `terraform init` (`./terraform init` if doing the easy way) in your terminal.
+1.) Enter command `terraform init` in your terminal.
 
-2.) Then enter command `terraform apply -var-file=example.tfvars` (`./terraform apply -var-file=example.tfvars` if doing the easy way). You will have to wait for around 3 minutes for the process to be done. When done there should be an output of the command. The output should be of the form `ssh adminUser@20.192.192.192`.
+2.) Then enter command `terraform apply -var-file=example.tfvars`. You will have to wait for around 3 minutes for the process to be done. When done there should be an output of the command. The output should be of the form `ssh adminUser@20.192.192.192`.
 
 3.) Copy and paste the command to the terminal. 
 
@@ -55,4 +55,4 @@ sudo mv terraform /usr/local/bin/
 
 5.) Congratulations, you have access to your linux virtual machine. To return to terminal from SSH press `Ctrl` + `D`.
 
-6.) IMPORTANT: `terraform destroy -var-file='example.tfvars'` or `./terraform destroy -var-file='example.tfvars` after use and do not close terminal while destroying is on progress.
+6.) IMPORTANT: `terraform destroy -var-file='example.tfvars'` after use and do not close terminal while destroying is on progress.
