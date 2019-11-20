@@ -14,7 +14,7 @@ Linux VM implementation in Terraform to Azure.
   
 Example: 
 
-`example.tfvars` file contents:
+`example.tfvars` file contents (replace with your own valid ids):
 ```tfvars
   subscription_id = XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
   tenant_id = OOOOOOOO-OOOO-OOOO-OOOO-OOOOOOOOOOOO
