@@ -30,7 +30,8 @@ git clone https://github.com/DragonMeme/terraform-linux-vm-azure.git
 ### Windows 10:
 Preparation: You will have to have terraform setup as an environment variable before following this step.
 Otherwise the easy way is to move the `terraform.exe` file to the same directory as your project.
-If doing the easy way, your command prefix will be `./terraform` instead of `terraform`.
+
+Note: If doing the easy way, your command prefix will be `./terraform` instead of `terraform`.
 
 1.) Enter command `terraform init` in your terminal.
 
