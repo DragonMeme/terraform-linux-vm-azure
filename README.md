@@ -35,4 +35,4 @@ Otherwise the easy way is to move the `terraform.exe` file to the same directory
 
 5.) Congratulations, you have access to your linux virtual machine.
 
-6.) IMPORTANT: `terraform destroy` or `./terraform destroy` after use and do not close terminal while destroying is on progress.
+6.) IMPORTANT: `terraform destroy -var-file='example.tfvars'` or `./terraform destroy -var-file='example.tfvars` after use and do not close terminal while destroying is on progress.
