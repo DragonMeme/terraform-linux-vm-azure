@@ -1,11 +1,13 @@
 variable "subscription_id" {
     # replace "invalid" with your subscription id
     default = "invalid"
+    description = "Add your valid subscription to this variable."
 }
 
 variable "tenant_id" {
     # replace "invalid" with your tenant id
     default = "invalid"
+    description = "Add your valid subscription to this variable."
 }
 
 variable "region" {
@@ -79,4 +81,15 @@ variable "OSDiskName" {
 #specify size to store os
 variable "OSDiskSize" {
     default = "Standard_LRS"
+}
+
+# tag environment
+variable "tagEnvironment" {
+    default = "Virtual Machine"
+    description = "Add tag to what the purpose of what the scripts here does overall."
+}
+
+variable "tagProject" {
+    default = "Linux Launcher"
+    description = "Add tag to what the purpose of what the scripts here does overall."
 }

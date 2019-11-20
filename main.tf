@@ -12,7 +12,8 @@ resource "azurerm_resource_group" "test" {
     name            = var.resourceName
     location        = var.region
     tags            = {
-        environment = "TF sandbox testing"
+        environment = var.tagEnvironment
+        project     = var.tagProject
     }
 }
 
@@ -88,7 +89,7 @@ resource "azurerm_virtual_machine" "vm_test" {
     storage_image_reference {
         publisher = "Canonical"
         offer     = "UbuntuServer"
-        sku       = "16.04-LTS"
+        sku       = "18.04-LTS"
         version   = "latest"
     }
 
