@@ -20,6 +20,8 @@ Example:
   tenant_id = OOOOOOOO-OOOO-OOOO-OOOO-OOOOOOOOOOOO
 ```
 
+WARNING: This service can cost money so remember to delete resource group using the terraform destroy command.
+
 ## How to run: 
 
 Clone this repository using the command:
