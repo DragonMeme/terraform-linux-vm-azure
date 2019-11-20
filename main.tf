@@ -11,13 +11,16 @@ provider "azurerm" {
 resource "azurerm_resource_group" "test" {
     name            = var.resourceName
     location        = var.region
+
+    # Add tags.
     tags            = {
         environment = var.tagEnvironment
         project     = var.tagProject
     }
 }
 
-# Create virtual network
+# Create virtual network. Mainly used to connect virtual machines to virtual machines.
+# Here we are using it to connect our virtual machine to a subnet.
 resource "azurerm_virtual_network" "test" {
     name                = var.nameTFVN
     resource_group_name = azurerm_resource_group.test.name
@@ -25,7 +28,7 @@ resource "azurerm_virtual_network" "test" {
     address_space       = ["10.0.0.0/16"]
 }
 
-# Create subnet
+# Create subnet. Mainly handles dividing of IP addresses. 
 resource "azurerm_subnet" "test" {
     name                 = var.nameTFS
     resource_group_name  = azurerm_resource_group.test.name
@@ -33,7 +36,7 @@ resource "azurerm_subnet" "test" {
     address_prefix       = "10.0.2.0/24"
 }
 
-# Create public IP
+# Create public IP. This is the IP that the VM will be associated to.
 resource "azurerm_public_ip" "test" {
     name                = var.nameTFPIP
     location            = azurerm_resource_group.test.location
@@ -41,7 +44,8 @@ resource "azurerm_public_ip" "test" {
     allocation_method   = "Static"
 }
 
-# Create security group
+# Create security group. This component is responsible for deciding access to VM.
+# In this case we are using SSH.
 resource "azurerm_network_security_group" "test" {
     name                = var.nameTFNSG
     location            = azurerm_resource_group.test.location
@@ -60,7 +64,7 @@ resource "azurerm_network_security_group" "test" {
     }
 }
 
-# Create network interface
+# Create network interface. Establish a connection to SSH using the given IP.
 resource "azurerm_network_interface" "test" {
     name                = var.nameTFNI
     location            = azurerm_resource_group.test.location
@@ -73,7 +77,7 @@ resource "azurerm_network_interface" "test" {
     }
 }
 
-# Start virtual machine
+# Start virtual machine. This resource is where the core of the virtual machine is.
 resource "azurerm_virtual_machine" "vm_test" {
     name                    = var.nameTFVM
     location                = azurerm_resource_group.test.location
@@ -93,6 +97,7 @@ resource "azurerm_virtual_machine" "vm_test" {
         version   = "latest"
     }
 
+    # Assemble the storage for the kernel.
     storage_os_disk {
         name              = var.OSDiskName
         caching           = "ReadWrite"
@@ -100,11 +105,14 @@ resource "azurerm_virtual_machine" "vm_test" {
         managed_disk_type = var.OSDiskSize
     }
 
+    # Give login details of the VM.
     os_profile {
         computer_name  = var.hostName
         admin_username = var.adminUser
         admin_password = var.adminPassword
     }
+
+    # Default request the password in order to access.
     os_profile_linux_config {
         disable_password_authentication = false
     }
