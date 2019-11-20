@@ -10,6 +10,7 @@ Linux VM implementation in Terraform to Azure.
   * subscription_id
   * tenant_id
 * Terraform ([Download here](https://www.terraform.io/downloads.html) based on operating system.)
+* git (so you can clone this repository)
   
 Example: 
 
@@ -20,6 +21,11 @@ Example:
 ```
 
 ## How to run: 
+
+Clone this repository using the command:
+```
+git clone https://github.com/DragonMeme/terraform-linux-vm-azure.git
+```
 
 ### Windows 10:
 Preparation: You will have to have terraform setup as an environment variable before following this step.
