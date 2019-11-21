@@ -35,7 +35,7 @@ Example:
   subscription_id = "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
   tenant_id = "OOOOOOOO-OOOO-OOOO-OOOO-OOOOOOOOOOOO"
 
-  #Optional
+  # Optional
   tagAuthor = "David Janson"
 ```
 
