@@ -18,11 +18,11 @@ The components above are already set in `main.tf` along with the implementation 
 
 `outputs.tf` contains the output of the command needed to access the virtual machine along with the password to log in to the virtual machine in case the password is forgotten.
 
-`variables.tf` contains default values for most inputs if not assigned any value in a `.tfvars` file.
+`variables.tf` contains default values for most inputs if not assigned any value in a `.auto.tfvars` file.
 
 ## Requirements: 
 * Microsoft Azure account with subscription_id and tenant_id.
-* A `.tfvars` file (see example below and is not included with the repo so you have to make your own) with at least:
+* A `.auto.tfvars` file (see example below and is not included with the repo so you have to make your own) with at least:
   * subscription_id
   * tenant_id
 * Terraform ([Download here](https://www.terraform.io/downloads.html) based on operating system.)
@@ -30,7 +30,7 @@ The components above are already set in `main.tf` along with the implementation 
   
 Example: 
 
-`example.tfvars` file contents (replace with your own valid ids):
+`example.auto.tfvars` file contents (replace with your own valid ids):
 ```tfvars
   subscription_id = "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
   tenant_id = "OOOOOOOO-OOOO-OOOO-OOOO-OOOOOOOOOOOO"
@@ -58,7 +58,7 @@ Note: If doing the easy way, your command prefix will be `./terraform` instead o
 
 OPTIONAL: `terraform plan` to double check setup.
 
-2.) Then enter command `terraform apply -var-file='example.tfvars'` if doing the easy way). You will have to wait for around 3 minutes for the process to be done. When done there should be an output of the command. The output should be of the form `ssh adminUser@20.192.192.192`.
+2.) Then enter command `terraform apply` if doing the easy way). You will have to wait for around 3 minutes for the process to be done. When done there should be an output of the command. The output should be of the form `ssh adminUser@20.192.192.192`.
 
 OPTIONAL: Use `terraform output Password` if you have forgotten the password or want it printed on console.
 
@@ -80,7 +80,7 @@ sudo mv terraform /usr/local/bin/
 
 OPTIONAL: `terraform plan` to double check setup.
 
-2.) Then enter command `terraform apply -var-file=example.tfvars`. You will have to wait for around 3 minutes for the process to be done. When done there should be an output of the command. The output should be of the form `ssh adminUser@20.192.192.192`.
+2.) Then enter command `terraform apply`. You will have to wait for around 3 minutes for the process to be done. When done there should be an output of the command. The output should be of the form `ssh adminUser@20.192.192.192`.
 
 OPTIONAL: Use `terraform output Password` if you have forgotten the password or want it printed on console.
 
@@ -90,4 +90,4 @@ OPTIONAL: Use `terraform output Password` if you have forgotten the password or 
 
 5.) Congratulations, you have access to your linux virtual machine. To return to terminal from SSH press `Ctrl` + `D` or type in command `logout`.
 
-6.) IMPORTANT: `terraform destroy -var-file='example.tfvars'` after use and do not close terminal while destroying is on progress.
+6.) IMPORTANT: `terraform destroy` after use and do not close terminal while destroying is on progress.
