@@ -64,7 +64,7 @@ OPTIONAL: Use `terraform output Password` if you have forgotten the password or 
 
 3.) Copy and paste the command to the terminal. 
 
-4.) Follow terminal instructions and enter your password.
+4.) Follow terminal instructions and enter your password. Default password is `Password!234`
 
 5.) Congratulations, you have access to your linux virtual machine. To return to terminal from SSH press `Ctrl` + `D`.
 
@@ -86,7 +86,7 @@ OPTIONAL: Use `terraform output Password` if you have forgotten the password or 
 
 3.) Copy and paste the command to the terminal. 
 
-4.) Follow terminal instructions and enter your password.
+4.) Follow terminal instructions and enter your password. Default password is `Password!234`
 
 5.) Congratulations, you have access to your linux virtual machine. To return to terminal from SSH press `Ctrl` + `D`.
 
