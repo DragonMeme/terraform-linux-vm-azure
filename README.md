@@ -48,6 +48,13 @@ Clone this repository using the command:
 git clone https://github.com/DragonMeme/terraform-linux-vm-azure.git
 ```
 
+Check that there is a resource group named "RG_TEST" with the Storage Account "msa2019interntfstatetest" and the container called "tfstate" present. Otherwise make one in Azure Cloud.
+
+Use the command in bash to obtain the access key: 
+```bash
+export ARM_ACCESS_KEY=$(az storage account keys list --resource-group RG_TEST --account-name msa2019interntfstatetest --query [0].value -o tsv)
+```
+
 ### Windows 10:
 Preparation: You will have to have terraform setup as an environment variable before following this step.
 Otherwise the easy way is to move the `terraform.exe` file to the same directory as your project.
