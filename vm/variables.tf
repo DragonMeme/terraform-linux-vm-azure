@@ -3,35 +3,11 @@ variable "location" {
   default     = "australiaeast"
 }
 
-variable "rg_name" {
-  description = "Name of the resource group to deploy things such as virtual machine."
-}
-
 variable "tags" {
   description = "tags"
 }
 
-variable "storage_account_name" {
-}
-
-variable "container_name" {
-}
-
-variable "state_name" {
-}
-
-variable "rg_name_state" {
-  
-}
-
-variable "project_name" {
-}
-
-variable "state_tags" {
-  
-}
-
-variable "state_location" {
+variable "name" {
   
 }
 
@@ -105,4 +81,3 @@ variable "OSDiskName" {
 variable "OSDiskSize" {
     default = "Standard_LRS"
 }
-
