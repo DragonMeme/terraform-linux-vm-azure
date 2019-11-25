@@ -15,7 +15,7 @@ variable "region" {
 }
 
 variable "resourceName" {
-    default = "testLinuxVMDeploy"
+    default = "RG_VM"
 }
 
 # name for virtual machine

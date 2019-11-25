@@ -7,6 +7,6 @@ terraform {
     storage_account_name = "statestoragelvm"
     container_name       = "tfstate"
     key                  = "test.terraform.tfstate"
-    resource_group_name  = "Ken_Linux_Virtual_Machine"
+    resource_group_name  = "RG_VM"
   }
 }
