@@ -1,4 +1,4 @@
-# terraform-linux-vm-azure
+# terraform-linux-vm-azure (not updated)
 
 Adapted from [Getting Started](https://learn.hashicorp.com/terraform/azure/intro_az)
 
