@@ -57,9 +57,9 @@ You will have a list consisting of your subscription ID (key is `id`) and tenant
 
 This branch is designed to input tfstates into the cloud storage and so will involve an extra repository.
 
-Clone this repository [here](https://github.com/DragonMeme/terraform-storage-system-azure.git) and follow the instructions here.
+Clone this repository [here](https://github.com/DragonMeme/terraform-storage-system-azure.git) and follow the instructions there.
 
-THe output command of that repo after `terraform apply` should be of the form:: 
+THe output command of that project after `terraform apply` should be of the form: 
 ```bash
 export ARM_ACCESS_KEY=$(az storage account keys list --resource-group RG --account-name tfstatetest --query [0].value -o tsv)
 ```
