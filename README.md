@@ -36,7 +36,11 @@ Example:
   tenant_id = "OOOOOOOO-OOOO-OOOO-OOOO-OOOOOOOOOOOO"
 
   # Optional
-  tagAuthor = "David Janson"
+  tags = {
+    createdBy = "Jason"
+    environment = "VM"
+    project = "Linux"
+  }
 ```
 
 WARNING: This service can cost money so remember to delete resource group using the terraform destroy command.
@@ -50,12 +54,7 @@ git clone https://github.com/DragonMeme/terraform-linux-vm-azure.git
 
 Login to azure using `az login`.
 
-Check that there is a resource group named `RG_TEST` with the Storage Account `msa2019interntfstatetest` and the container called `tfstate` present. Otherwise make one in Azure Cloud with the following naming conventions as stated above.
-
-Use the command in bash to obtain the access key: 
-```bash
-export ARM_ACCESS_KEY=$(az storage account keys list --resource-group RG_TEST --account-name msa2019interntfstatetest --query [0].value -o tsv)
-```
+You will have a list consisting of your subscription ID (key is `id`) and tenant ID (key is `tenantId`), put those in the `.auto.tfvars` file.
 
 ### Windows 10:
 Preparation: You will have to have terraform setup as an environment variable before following this step.
