@@ -13,11 +13,7 @@ resource "azurerm_resource_group" "test" {
     location        = var.region
 
     # Add tags.
-    tags            = {
-        environment = var.tagEnvironment
-        project     = var.tagProject
-        createdBy   = var.tagAuthor
-    }
+    tags            = var.tags
 }
 
 # Create virtual network.
