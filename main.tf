@@ -36,5 +36,9 @@ module "vm" {
     nameTFNI = var.nameTFNI
     nameIPConfig = var.nameIPConfig
     nameTFRT = var.nameTFRT
+
+    hostName = var.hostName
+    adminUser = var.adminUser
+    adminPassword = var.adminPassword
 }
 
