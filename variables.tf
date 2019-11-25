@@ -90,17 +90,10 @@ variable "OSDiskSize" {
 }
 
 # tag environment
-variable "tagEnvironment" {
-    default = "Virtual Machine"
-    description = "Add tag to what the purpose of what the scripts here does overall."
-}
-
-variable "tagProject" {
-    default = "Linux Launcher"
-    description = "Add tag to what the purpose of what the scripts here does overall."
-}
-
-variable "tagAuthor" {
-    default = "Anonymous"
-    description = "Add name of author."
+variable "tags" {
+    default = {
+        Environment = "TEST"
+        Project = "Store Shared State"
+        CreatedBy = "Anonymous"
+    }
 }
