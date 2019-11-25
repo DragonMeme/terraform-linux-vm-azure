@@ -15,7 +15,7 @@ variable "region" {
 }
 
 variable "resourceName" {
-    default = "RG_VM"
+    default = "RG_LVM"
 }
 
 # name for virtual machine
