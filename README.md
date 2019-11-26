@@ -72,7 +72,7 @@ THe output command of that project after `terraform apply` should be of the form
 export ARM_ACCESS_KEY=$(az storage account keys list --resource-group RG --account-name tfstatetest --query [0].value -o tsv)
 ```
 
-Run the output in a bash terminal (git bash works on both windows and linux).
+Run the given output command in a bash terminal (git bash works on both windows and linux).
 
 ### Windows 10:
 Preparation: You will have to have terraform setup as an environment variable before following this step.
