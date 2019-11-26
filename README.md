@@ -43,6 +43,11 @@ Example:
     environment = "VM"
     project = "Linux"
   }
+  hostName = "myVM"
+  # If adding username, username can only contain letters.
+  adminUser = "ubuntu"
+  # If changing username, must add password that contains uppercase and lowercase letters and numbers and 6-72 characters long.
+  adminPassword = "Port4b1e"
 ```
 
 WARNING: This service can cost money so remember to delete resource group using the terraform destroy command.
