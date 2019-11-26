@@ -56,7 +56,7 @@ WARNING: This service can cost money so remember to delete resource group using 
 
 Clone this repository using the command:
 ```
-git clone https://github.com/DragonMeme/terraform-linux-vm-azure.git
+git clone -b local-state https://github.com/DragonMeme/terraform-linux-vm-azure.git
 ```
 
 Login to azure using `az login`.
