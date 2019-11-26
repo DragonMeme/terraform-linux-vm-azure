@@ -1,4 +1,6 @@
-# terraform-linux-vm-azure
+# terraform-linux-vm-azure (local state build)
+
+Click [here](https://github.com/DragonMeme/terraform-linux-vm-azure/tree/remote-state) for remote state instructions.
 
 Adapted from [Getting Started](https://learn.hashicorp.com/terraform/azure/intro_az)
 
