@@ -98,7 +98,6 @@ OPTIONAL: Use `terraform output Password` if you have forgotten the password or 
 
 7.) Type the following commands on to the linux terminal in order to be able to have a linux desktop: 
 
-
   a.) Type in the following commands:
   ```bash
   # Copy and paste each command line by line
@@ -138,8 +137,6 @@ OPTIONAL: Use `terraform output Password` if you have forgotten the password or 
 OPTIONAL: Input username and password on the remote desktop connection so you do not need to login.
 
 9.) Now you have a desktop interface to operate with.
-
-10.) IMPORTANT: `terraform destroy` if not going to be used and do not close terminal while destroying is on progress.
 
 ### Ubuntu 18.04: 
 Preparation: You will have to extract from the downloaded `.tar.gz` file first and then move the `terraform` file to `/usr/local/bin/`. Command to do this is:
@@ -207,3 +204,7 @@ OPTIONAL: Use `terraform output Password` if you have forgotten the password or 
 NOTE: You may have to change color depth if you got a warning of unsupported H264. In this case, the fix is click the `+` button and then go to color depth, change to `GFX RFX` or lower.
 
 10.) Enter login credentials and you are ready to use the virtual machine desktop interface.
+
+## Important
+
+`terraform destroy` to avoid excessive costs towards linux virtual machine hosting if not going to be used for a long time.
