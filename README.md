@@ -94,6 +94,39 @@ OPTIONAL: Use `terraform output Password` if you have forgotten the password or 
 
 5.) Congratulations, you have access to your linux virtual machine. To return to terminal from SSH press `Ctrl` + `D` or type in command `logout`.
 
+6.) You now only have access to the linux terminal for now, to have a desktop, you will have to install remote desktop software support.
+
+7.) Type the following commands on to the linux terminal in order to be able to have a linux desktop: 
+
+
+  a.) Type in the following commands:
+  ```bash
+  sudo apt-get update
+  sudo apt-get upgrade
+  sudo apt-get -y install xrdp
+  ```
+
+  b.) You have a choice of a few desktop setups. Do this if you want lubuntu setup, otherwise skip this step. Type in the following commands:
+  ```bash
+  sudo apt-get install lubuntu-desktop
+  sudo echo "lxsession -s Lubuntu -e LXDE" > ~/.xsession
+  ```
+  c.) Do this if you want xubuntu setup, otherwise skip this step. Type in the following commands:
+  ```bash
+  sudo apt-get install xfce4 -y 
+  sudo su
+  echo xfce4-session >/root/.xsession 
+  sudo echo "lxsession -s Lubuntu -e LXDE" > ~/.xsession
+  sed -i '/\/etc\/X11\/Xsession/i xfce4-session' /etc/xrdp/startwm.sh
+  ```
+
+  d.) Restart xrdp by typing in the command line `sudo /etc/init.d/xrdp restart`
+
+8.) Run `Remote Desktop Connections` and type the IP address (from the output command, should be of the form `20.214.2.214` after the `@` on the ssh command.) and then press connect.
+OPTIONAL: Input username and password on the remote desktop connection so you do not need to login.
+
+9.) Now you have a desktop interface to operate with.
+
 6.) IMPORTANT: `terraform destroy` after use and do not close terminal while destroying is on progress.
 
 ### Ubuntu 18.04: 
