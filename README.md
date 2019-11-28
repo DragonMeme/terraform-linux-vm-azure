@@ -101,22 +101,34 @@ OPTIONAL: Use `terraform output Password` if you have forgotten the password or 
 
   a.) Type in the following commands:
   ```bash
+  # Copy and paste each command line by line
   sudo apt-get update
   sudo apt-get upgrade
+
+  # Installs support for RDP so that desktop can be used.
   sudo apt-get -y install xrdp
   ```
 
   b.) You have a choice of a few desktop setups. Do this if you want lubuntu setup, otherwise skip this step. Type in the following commands:
   ```bash
+  # Obtain the necessary packages for lubuntu
   sudo apt-get install lubuntu-desktop
+
+  # Tell xrdp to use lubuntu session
   sudo echo "lxsession -s Lubuntu -e LXDE" > ~/.xsession
   ```
   c.) Do this if you want xubuntu setup, otherwise skip this step. Type in the following commands:
   ```bash
+  # Obtain the necessary packages for xubuntu
   sudo apt-get install xfce4 -y 
+
+  # Use command as root
   sudo su
+
+  # Tell xrdp to use xubuntu package
   echo xfce4-session >/root/.xsession 
-  sudo echo "lxsession -s Lubuntu -e LXDE" > ~/.xsession
+
+  # Allow other users to use the virtual machine instead of only console.
   sed -i '/\/etc\/X11\/Xsession/i xfce4-session' /etc/xrdp/startwm.sh
   ```
 
