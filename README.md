@@ -127,8 +127,6 @@ OPTIONAL: Input username and password on the remote desktop connection so you do
 
 9.) Now you have a desktop interface to operate with.
 
-10.) IMPORTANT: `terraform destroy` if not going to be used and do not close terminal while destroying is on progress.
-
 ### Ubuntu 18.04: 
 Preparation: You will have to extract from the downloaded `.tar.gz` file first and then move the `terraform` file to `/usr/local/bin/`. Command to do this is:
 ```bash
@@ -149,4 +147,49 @@ OPTIONAL: Use `terraform output Password` if you have forgotten the password or 
 
 5.) Congratulations, you have access to your linux virtual machine. To return to terminal from SSH press `Ctrl` + `D` or type in command `logout`.
 
-6.) IMPORTANT: `terraform destroy` after use and do not close terminal while destroying is on progress.
+6.) You now only have access to the linux terminal for now, to have a desktop, you will have to install remote desktop software support.
+
+7.) Type the following commands on to the linux terminal in order to be able to have a linux desktop: 
+
+
+  a.) Type in the following commands:
+  ```bash
+  # Copy and paste each command line by line
+  sudo apt-get update
+  sudo apt-get upgrade
+
+  # Installs support for RDP so that desktop can be used.
+  sudo apt-get -y install xrdp
+  ```
+
+  b.) You have a choice of a few desktop setups. Do this if you want lubuntu setup, otherwise skip this step. Type in the following commands:
+  ```bash
+  # Obtain the necessary packages for lubuntu
+  sudo apt-get install lubuntu-desktop
+
+  # Tell xrdp to use lubuntu session
+  sudo echo "lxsession -s Lubuntu -e LXDE" > ~/.xsession
+  ```
+  c.) Do this if you want xubuntu setup, otherwise skip this step. Type in the following commands:
+  ```bash
+  # Obtain the necessary packages for xubuntu
+  sudo apt-get install xfce4 -y 
+
+  # Use command as root
+  sudo su
+
+  # Tell xrdp to use xubuntu package
+  echo xfce4-session >/root/.xsession 
+
+  # Allow other users to use the virtual machine instead of only console.
+  sed -i '/\/etc\/X11\/Xsession/i xfce4-session' /etc/xrdp/startwm.sh
+  ```
+
+  d.) Restart xrdp by typing in the command line `sudo /etc/init.d/xrdp restart`
+
+8.) Run `Remmina`. It should show a window.
+
+9.) Input the public IP address on the bottom of the title window.
+NOTE: You may have to change color depth if you got a warning of unsupported H264. In this case, the fix is click the `+` button and then go to color depth, change to `GFX RFX` or lower.
+
+10.) Enter login credentials and you are ready to use the virtual machine desktop interface.
