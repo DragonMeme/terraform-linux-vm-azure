@@ -193,3 +193,7 @@ OPTIONAL: Use `terraform output Password` if you have forgotten the password or 
 NOTE: You may have to change color depth if you got a warning of unsupported H264. In this case, the fix is click the `+` button and then go to color depth, change to `GFX RFX` or lower.
 
 10.) Enter login credentials and you are ready to use the virtual machine desktop interface.
+
+## Important
+
+`terraform destroy` to avoid excessive costs towards linux virtual machine hosting if not going to be used for a long time.
