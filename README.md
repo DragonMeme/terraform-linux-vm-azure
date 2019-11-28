@@ -139,7 +139,7 @@ OPTIONAL: Input username and password on the remote desktop connection so you do
 
 9.) Now you have a desktop interface to operate with.
 
-6.) IMPORTANT: `terraform destroy` after use and do not close terminal while destroying is on progress.
+10.) IMPORTANT: `terraform destroy` if not going to be used and do not close terminal while destroying is on progress.
 
 ### Ubuntu 18.04: 
 Preparation: You will have to extract from the downloaded `.tar.gz` file first and then move the `terraform` file to `/usr/local/bin/`. Command to do this is:
