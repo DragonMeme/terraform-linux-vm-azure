@@ -187,7 +187,7 @@ OPTIONAL: Use `terraform output Password` if you have forgotten the password or 
   # Obtain the necessary packages for xubuntu
   sudo apt-get install xfce4 -y 
 
-  # Use command as root
+  # Allow command use as root
   sudo su
 
   # Tell xrdp to use xubuntu package

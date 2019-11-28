@@ -70,7 +70,7 @@ variable "adminPassword" {
 
 # specify size of VM
 variable "VMSize" {
-    default = "Standard_G1"
+    default = "Standard_DS1_v2"
 }
 
 # name of disk for os
