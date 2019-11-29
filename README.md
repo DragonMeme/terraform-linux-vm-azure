@@ -123,7 +123,8 @@ OPTIONAL: Use `terraform output Password` if you have forgotten the password or 
   d.) Restart xrdp by typing in the command line `sudo /etc/init.d/xrdp restart`
 
 8.) Run `Remote Desktop Connections` and type the IP address (from the output command, should be of the form `20.214.2.214` after the `@` on the ssh command.) and then press connect.
-OPTIONAL: Input username and password on the remote desktop connection so you do not need to login.
+
+OPTIONAL: Input username and password on the remote desktop connection so you do not need to login everytime a connection is launched.
 
 9.) Now you have a desktop interface to operate with.
 
@@ -189,10 +190,11 @@ OPTIONAL: Use `terraform output Password` if you have forgotten the password or 
 
 8.) Run `Remmina`. It should show a window.
 
-9.) Input the public IP address on the bottom of the title window.
-NOTE: You may have to change color depth if you got a warning of unsupported H264. In this case, the fix is click the `+` button and then go to color depth, change to `GFX RFX` or lower.
+9.) Click on the `+` button, Put your public IP address as your server. 
 
-10.) Enter login credentials and you are ready to use the virtual machine desktop interface.
+OPTIONAL: Input your username and password in its respective text boxes so you can automatically log in.
+
+10.) Enter login credentials when possible and you are ready to use the virtual machine desktop interface.
 
 ## Important
 
