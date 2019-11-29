@@ -11,7 +11,7 @@ In order to run a virtual machine, these components are needed:
 * Virtual network: Network that connects VM to VM(s) or other components.
 * Subnet: Handles IP address(es) processes.
 * Public IP Address: The address needed to connect to VM.
-* Network Security Group: Decides how the VM should be accessed, in this case we use SSH to access the VM.
+* Network Security Group: Decides how the VM should be accessed, in this case we use SSH and RDP to access the VM.
 * Network Interface: Helps connect the host to the private/public network.
 
 But in this case, route table is optional as not a lot of people would be accessing the VM.
