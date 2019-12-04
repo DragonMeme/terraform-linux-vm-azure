@@ -91,3 +91,7 @@ variable "tags" {
         CreatedBy = "Anonymous"
     }
 }
+
+variable "nameDNS" {
+    default = "mylinuxvm30124"
+}

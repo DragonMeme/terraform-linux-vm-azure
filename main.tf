@@ -38,6 +38,9 @@ resource "azurerm_public_ip" "test" {
     location            = azurerm_resource_group.test.location
     resource_group_name = azurerm_resource_group.test.name
     allocation_method   = "Static"
+
+    # Add domain name.
+    domain_name_label = var.nameDNS
 }
 
 # Create security group. This component is responsible for deciding access to VM.
@@ -68,6 +71,19 @@ resource "azurerm_network_security_group" "test" {
         protocol                   = "Tcp"
         source_port_range          = "*"
         destination_port_range     = "3389"
+        source_address_prefix      = "*"
+        destination_address_prefix = "*"
+    }
+
+    # Port for accessing via HTTP
+    security_rule {
+        name                       = "HTTP"
+        priority                   = 1002
+        direction                  = "Inbound"
+        access                     = "Allow"
+        protocol                   = "Tcp"
+        source_port_range          = "*"
+        destination_port_range     = "80"
         source_address_prefix      = "*"
         destination_address_prefix = "*"
     }
@@ -126,5 +142,6 @@ resource "azurerm_virtual_machine" "vm_test" {
     os_profile_linux_config {
         disable_password_authentication = false
     }
+
 }
 
