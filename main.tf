@@ -87,6 +87,19 @@ resource "azurerm_network_security_group" "test" {
         source_address_prefix      = "*"
         destination_address_prefix = "*"
     }
+
+    # Port for accessing other sources.
+    security_rule {
+        name                       = "Internet"
+        priority                   = 1003
+        direction                  = "Inbound"
+        access                     = "Allow"
+        protocol                   = "Tcp"
+        source_port_range          = "*"
+        destination_port_range     = "8000-8080"
+        source_address_prefix      = "*"
+        destination_address_prefix = "*"
+    }
 }
 
 # Create network interface.
