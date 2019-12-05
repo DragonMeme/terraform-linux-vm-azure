@@ -84,7 +84,7 @@ Note: If doing the easy way, your command prefix will be `./terraform` instead o
 
 OPTIONAL: `terraform plan` to double check setup.
 
-2.) Then enter command `terraform apply` if doing the easy way). You will have to wait for around 3 minutes for the process to be done. When done there should be an output of the command. The output should be of the form `ssh adminUser@20.192.192.192`.
+2.) Then enter command `terraform apply` if doing the easy way). You will have to wait for around 3 minutes for the process to be done. When done there should be an output of the command. The output should be of the form `ssh adminUser@domainname.region.cloudapp.azure.com`.
 
 OPTIONAL: Use `terraform output Password` if you have forgotten the password or want it printed on console.
 
@@ -133,7 +133,7 @@ OPTIONAL: Use `terraform output Password` if you have forgotten the password or 
 
   d.) Restart xrdp by typing in the command line `sudo /etc/init.d/xrdp restart`
 
-8.) Run `Remote Desktop Connections` and type the IP address (from the output command, should be of the form `20.214.2.214` after the `@` on the ssh command.) and then press connect.
+8.) Run `Remote Desktop Connections` and type the domain (from the output command, should be of the form `domainname.region.cloudapp.azure.com` after the `@` on the ssh command.) and then press connect.
 
 OPTIONAL: Input username and password on the remote desktop connection so you do not need to login everytime a connection is launched.
 
@@ -149,7 +149,7 @@ sudo mv terraform /usr/local/bin/
 
 OPTIONAL: `terraform plan` to double check setup.
 
-2.) Then enter command `terraform apply`. You will have to wait for around 3 minutes for the process to be done. When done there should be an output of the command. The output should be of the form `ssh adminUser@20.192.192.192`.
+2.) Then enter command `terraform apply`. You will have to wait for around 3 minutes for the process to be done. When done there should be an output of the command. The output should be of the form `adminUser@domainname.region.cloudapp.azure.com`.
 
 OPTIONAL: Use `terraform output Password` if you have forgotten the password or want it printed on console.
 
@@ -201,7 +201,7 @@ OPTIONAL: Use `terraform output Password` if you have forgotten the password or 
 
 8.) Run `Remmina`. It should show a window.
 
-9.) Click on the `+` button, Put your public IP address as your server. 
+9.) Click on the `+` button, Put your public IP address/domain name (domain name is in the form `domainname.region.cloudapp.azure.com`) as your server. 
 
 OPTIONAL: Input your username and password in its respective text boxes so you can automatically log in.
 
