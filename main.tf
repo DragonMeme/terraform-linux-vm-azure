@@ -61,7 +61,7 @@ resource "azurerm_network_security_group" "test" {
         source_address_prefix      = "*"
         destination_address_prefix = "*"
     }
-    
+
     # Port for accessing via RDP
     security_rule {
         name                       = "RDP"
