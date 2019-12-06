@@ -1,0 +1,12 @@
+# Set the state to be stored in a blob hosted in Azure.
+# This assumes that there is a resource group name called RG_LVM that consists 
+# of a container named "tfstate" inside a storage account named "statestoragelvm".
+
+terraform {
+  backend "azurerm" {
+    storage_account_name = "statestoragelvm"
+    container_name       = "tfstate"
+    key                  = "test.terraform.tfstate"
+    resource_group_name  = "RG_LVM"
+  }
+}
